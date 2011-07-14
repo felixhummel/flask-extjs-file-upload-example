@@ -4,6 +4,7 @@
 import os
 from flask import Flask, request, redirect, url_for
 from flask import send_from_directory
+from flask import render_template
 from werkzeug import secure_filename
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
@@ -17,15 +18,7 @@ def allowed_file(filename):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return '''
-    <!doctype html>
-    <title>Upload new File</title>
-    <h1>Upload new File</h1>
-    <form action=/uploads method=post enctype=multipart/form-data>
-      <p><input type=file name=file>
-         <input type=submit value=Upload>
-    </form>
-    '''
+    return render_template('index.html')
 
 @app.route('/uploads', methods=['POST'])
 def upload_file():
