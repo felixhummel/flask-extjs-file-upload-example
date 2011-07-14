@@ -1,0 +1,21 @@
+Welcome back::
+
+  pythonbrew use Python-2.7.1
+  workon flask_file_upload
+
+Initial::
+
+  pythonbrew use Python-2.7.1
+  curl -s https://raw.github.com/brainsik/virtualenv-burrito/master/virtualenv-burrito.sh | bash
+  source /home/dfm/.venvburrito/startup.sh
+  # be sure to add the above to your ~/.bashrc
+  mkvirtualenv --no-site-packages --distribute flask_file_upload
+  workon flask_file_upload
+
+See https://github.com/brainsik/virtualenv-burrito#readme
+
+Now to the app itself
+
+http://flask.pocoo.org/docs/patterns/fileuploads/
+
+.. vim: set ft=rst :
