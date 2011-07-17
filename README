@@ -13,10 +13,14 @@ Initial::
   mkvirtualenv --no-site-packages --distribute flask_file_upload
   workon flask_file_upload
 
+  cd static/js
+  # download and extract extjs here
+  ln -s ext-* extjs
+
 See https://github.com/brainsik/virtualenv-burrito#readme
 
 Now to the app itself
 
 http://flask.pocoo.org/docs/patterns/fileuploads/
 
-.. vim: set ft=rst :
+.. vim: set encoding=utf-8 filetype=rst :
