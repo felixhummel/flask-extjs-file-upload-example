@@ -26,7 +26,21 @@ def upload_file():
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        return redirect(url_for('uploaded_file', filename=filename))
+        file_url = '/uploads/%s'%filename
+        return '''\
+{
+    "success":true, // note this is Boolean, not string
+    "msg":"Consignment updated",
+    "file": "%s",
+    "file_url": "%s"
+}\
+'''%(filename, file_url)
+    return '''\
+{
+    "success": false, // note this is Boolean, not string
+    "msg":"Consignment updated"
+}\
+'''
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):

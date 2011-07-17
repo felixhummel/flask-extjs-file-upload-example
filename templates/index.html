@@ -1,12 +1,13 @@
 <!doctype html>
 <head>
   <title>Upload new File</title>
-  <script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="static/js/extjs/resources/css/ext-all.css">
+  <script type="text/javascript" src="static/js/extjs/ext-debug.js"></script>
+  <script type="text/javascript" src="static/js/app.js"></script>
 </head>
 <body>
-  <h1>Upload new File</h1>
-  <form action=/uploads method=post enctype=multipart/form-data>
-    <input type=file name=file>
-    <input type=submit value=Upload>
-  </form>
+  <noscript>
+    <p>No Javascript? Get a decent browser from <a href="http://www.mozilla.com/firefox">Mozilla</a> or <a href="http://www.google.com/chrome/">Google</a>!</p>
+  </noscript>
+  <div id="upload-form"></div>
 </body>
