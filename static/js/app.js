@@ -53,7 +53,7 @@ Ext.onReady(function(){
                         method: 'post',
                         waitMsg: 'Uploading your photo...',
                         success: function(fp, o) {
-                            msg('Success', 'Processed file "' + o.result.file + '" on the server');
+                            location.href = o.result.file_url;
                         }
                     });
                 }
