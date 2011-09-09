@@ -23,4 +23,4 @@ Now to the app itself
 
 http://flask.pocoo.org/docs/patterns/fileuploads/
 
-.. vim: set encoding=utf-8 filetype=rst :
+.. vim: set fileencoding=utf-8 filetype=rst :
