@@ -1,5 +1,5 @@
-#!/home/dfm/.virtualenvs/flask_file_upload/bin/python
-# vim: set encoding=utf-8 filetype=python :
+#!/usr/bin/env python
+# vim: set fileencoding=utf-8 filetype=python :
 
 import os
 from flask import Flask, request, redirect, url_for

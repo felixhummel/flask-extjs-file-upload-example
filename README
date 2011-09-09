@@ -1,21 +1,26 @@
 Welcome back::
 
-  pythonbrew use Python-2.7.1
-  source $HOME/.venvburrito/startup.sh
-  workon flask_file_upload
+    pythonbrew use Python-2.7.1
+    source $HOME/.venvburrito/startup.sh
+    workon flask_file_upload
 
 Initial::
 
-  pythonbrew use Python-2.7.1
-  curl -s https://raw.github.com/brainsik/virtualenv-burrito/master/virtualenv-burrito.sh | bash
-  source /home/dfm/.venvburrito/startup.sh
-  # be sure to add the above to your ~/.bashrc
-  mkvirtualenv --no-site-packages --distribute flask_file_upload
-  workon flask_file_upload
+    pythonbrew use Python-2.7.1
+    curl -s https://raw.github.com/brainsik/virtualenv-burrito/master/virtualenv-burrito.sh | bash
+    source $HOME/.venvburrito/startup.sh
+    # be sure to add the above to your ~/.bashrc
+    mkvirtualenv --no-site-packages --distribute flask_file_upload
+    workon flask_file_upload
 
-  cd static/js
-  # download and extract extjs here
-  ln -s ext-* extjs
+    cd static/js
+    # download and extract extjs here
+    wget http://extjs.cachefly.net/ext-4.0.2a-gpl.zip
+    unzip
+    ln -s extjs ext-4.0.2a-gpl/
+    cd ../../
+
+    python app.py
 
 See https://github.com/brainsik/virtualenv-burrito#readme
 
