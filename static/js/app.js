@@ -53,7 +53,15 @@ Ext.onReady(function(){
                         method: 'post',
                         waitMsg: 'Uploading your photo...',
                         success: function(fp, o) {
-                            location.href = o.result.file_url;
+                          Ext.get('images').createChild({
+                            tag: 'li',
+                            children: [
+                              {
+                                tag: 'img',
+                                src: o.result.file_url
+                              }
+                            ]
+                          });
                         }
                     });
                 }
